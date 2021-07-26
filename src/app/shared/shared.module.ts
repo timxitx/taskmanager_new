@@ -11,6 +11,13 @@ import { MatSlideToggleModule } from "@angular/material/slide-toggle";
 import { MatGridListModule } from "@angular/material/grid-list";
 import { MatDialogModule } from "@angular/material/dialog";
 import { MatAutocompleteModule } from "@angular/material/autocomplete";
+import { MatMenuModule } from "@angular/material/menu";
+import { MatCheckboxModule } from "@angular/material/checkbox";
+import { MatTooltipModule } from "@angular/material/tooltip";
+import { MatDatepickerModule } from "@angular/material/datepicker";
+import { MatRadioModule } from "@angular/material/radio";
+import { MatNativeDateModule } from "@angular/material/core";
+import { MatSelectModule } from "@angular/material/select";
 
 
 @NgModule({
@@ -28,6 +35,13 @@ import { MatAutocompleteModule } from "@angular/material/autocomplete";
     MatGridListModule,
     MatDialogModule,
     MatAutocompleteModule,
+    MatMenuModule,
+    MatCheckboxModule,
+    MatTooltipModule,
+    MatDatepickerModule,
+    MatRadioModule,
+    MatNativeDateModule,
+    MatSelectModule,
   ],
   exports: [
     CommonModule,
@@ -42,6 +56,13 @@ import { MatAutocompleteModule } from "@angular/material/autocomplete";
     MatGridListModule,
     MatDialogModule,
     MatAutocompleteModule,
+    MatMenuModule,
+    MatCheckboxModule,
+    MatTooltipModule,
+    MatDatepickerModule,
+    MatRadioModule,
+    MatNativeDateModule,
+    MatSelectModule,
   ]
 })
 export class SharedModule { }

@@ -18,10 +18,13 @@ import { MatDatepickerModule } from "@angular/material/datepicker";
 import { MatRadioModule } from "@angular/material/radio";
 import { MatNativeDateModule } from "@angular/material/core";
 import { MatSelectModule } from "@angular/material/select";
+import { ConfirmComponent } from './confirm/confirm.component';
 
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    ConfirmComponent
+  ],
   imports: [
     CommonModule,
     MatToolbarModule,
@@ -63,6 +66,9 @@ import { MatSelectModule } from "@angular/material/select";
     MatRadioModule,
     MatNativeDateModule,
     MatSelectModule,
+  ],
+  entryComponents: [
+    ConfirmComponent,
   ]
 })
 export class SharedModule { }

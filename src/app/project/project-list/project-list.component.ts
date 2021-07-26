@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialog } from "@angular/material/dialog";
 import { NewProjectComponent } from "../new-project/new-project.component";
 import { InviteComponent } from '../invite/invite.component';
+import { ConfirmComponent } from 'src/app/shared/confirm/confirm.component';
 
 @Component({
   selector: 'app-project-list',
@@ -13,13 +14,13 @@ export class ProjectListComponent implements OnInit {
   projects =[
     {
       "id": 1,
-      "name": "1",
+      "name": "Project1",
       "desc": "This is the project 1",
       "coverImg": "assets/img/covers/0.jpg"
     },
     {
       "id": 2,
-      "name": "2",
+      "name": "Project2",
       "desc": "This is the project 2",
       "coverImg": "assets/img/covers/1.jpg"
     }
@@ -31,13 +32,19 @@ export class ProjectListComponent implements OnInit {
   }
 
   openNewProjectDialog() {
-    const dialogRef = this.dialog.open(NewProjectComponent, {data: {dark: true}});
-    dialogRef.afterClosed().subscribe(result => console.log(result));
+    const dialogRef = this.dialog.open(NewProjectComponent, {data: {title: "New Project"}});
   }
 
   launchInviteDialog() {
     const dialogRef = this.dialog.open(InviteComponent);
-    dialogRef.afterClosed().subscribe(result => console.log(result));
+  }
+
+  launchEditDialog() {
+    const dialogRef = this.dialog.open(NewProjectComponent, {data: {title: "Edit Project"}});
+  }
+
+  launchConfirmDialog() {
+    const dialogRef = this.dialog.open(ConfirmComponent, {data: {title: "Delete Project", content: "Confirm to delete this project?"}})
   }
 
 }

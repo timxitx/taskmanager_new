@@ -20,8 +20,8 @@ import { ProjectRoutingModule } from "./project-routing.module";
     ProjectRoutingModule,
   ],
   entryComponents: [
-    NewProjectComponent,
-    InviteComponent
+    // NewProjectComponent,
+    // InviteComponent
   ]
 })
 export class ProjectModule { }

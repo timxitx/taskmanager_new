@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { NewTaskComponent } from '../new-task/new-task.component';
 import { CopyTaskComponent } from '../copy-task/copy-task.component';
+import { ConfirmComponent } from 'src/app/shared/confirm/confirm.component';
+import { NewTaskListComponent } from '../new-task-list/new-task-list.component';
 
 @Component({
   selector: 'app-task-home',
@@ -84,15 +86,27 @@ export class TaskHomeComponent implements OnInit {
   }
 
   openNewProjectDialog() {
-
+    const dialogRef = this.dialog.open(NewTaskListComponent, {data: {title:"New List"}});
   }
 
   launchNewTaskDialog() {
-    this.dialog.open(NewTaskComponent);
+    this.dialog.open(NewTaskComponent, {data: {title: 'New Task'}});
   }
 
   launchCopyTaskDialog() {
     const dialogRef = this.dialog.open(CopyTaskComponent, {data: {lists: this.lists}});
+  }
+
+  launchUpdateTaskDialog(task:any) {
+    const dialogRef = this.dialog.open(NewTaskComponent, {data: {title: 'Edit Task', task: task}})
+  }
+
+  launchConfirmDialog() {
+    const dialogRef = this.dialog.open(ConfirmComponent, {data: {title: "Delete List", content: "Confirm to delete this list?"}})
+  }
+
+  launchEditListDialog() {
+    const dialogRef = this.dialog.open(NewTaskListComponent, {data: {title: "Edit List Name"}})
   }
 
 }

@@ -7,6 +7,8 @@ import { MatIconRegistry } from '@angular/material/icon';
 import { DomSanitizer } from "@angular/platform-browser";
 import { loadSvgResources } from '../utils/svg.util';
 import { HttpClientModule } from '@angular/common/http';
+import { AppRoutingModule } from '../app-routing.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 
@@ -19,11 +21,15 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     SharedModule,
     HttpClientModule,
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   exports: [
     HeaderComponent,
     FooterComponent,
-    SidebarComponent
+    SidebarComponent,
+    AppRoutingModule,
+    BrowserAnimationsModule
   ]
 })
 export class CoreModule {

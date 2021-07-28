@@ -19,6 +19,7 @@ import { MatRadioModule } from "@angular/material/radio";
 import { MatNativeDateModule } from "@angular/material/core";
 import { MatSelectModule } from "@angular/material/select";
 import { ConfirmComponent } from './confirm/confirm.component';
+import { MatSidenavModule } from '@angular/material/sidenav';
 
 
 @NgModule({
@@ -45,6 +46,7 @@ import { ConfirmComponent } from './confirm/confirm.component';
     MatRadioModule,
     MatNativeDateModule,
     MatSelectModule,
+    MatSidenavModule,
   ],
   exports: [
     CommonModule,
@@ -66,6 +68,7 @@ import { ConfirmComponent } from './confirm/confirm.component';
     MatRadioModule,
     MatNativeDateModule,
     MatSelectModule,
+    MatSidenavModule,
   ],
   entryComponents: [
     ConfirmComponent,

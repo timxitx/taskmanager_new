@@ -1,9 +1,10 @@
 .card{
     flex: 0 0 260px;
     margin: 10px;
+    height: 341px;
 }
 
-:host{
+.container{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;

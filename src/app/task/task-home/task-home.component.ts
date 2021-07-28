@@ -1,16 +1,22 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostBinding } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { NewTaskComponent } from '../new-task/new-task.component';
 import { CopyTaskComponent } from '../copy-task/copy-task.component';
 import { ConfirmComponent } from 'src/app/shared/confirm/confirm.component';
 import { NewTaskListComponent } from '../new-task-list/new-task-list.component';
+import { routeAnim } from 'src/app/anims/router.anim';
 
 @Component({
   selector: 'app-task-home',
   templateUrl: './task-home.component.html',
-  styleUrls: ['./task-home.component.scss']
+  styleUrls: ['./task-home.component.scss'],
+  animations: [
+    routeAnim
+  ]
 })
 export class TaskHomeComponent implements OnInit {
+
+  @HostBinding('@slideToRight') state: any;
 
   lists = [
     {
